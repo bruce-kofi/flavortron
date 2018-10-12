@@ -1,0 +1,22 @@
+body.page-template, body.single-project {
+	background-color: $bg-color;
+
+	h1, h4 {
+		background-color: $flavortron-yellow;
+		color: #000;
+		padding: 10px 20px;
+		text-transform: uppercase;
+		transform: skewX(-15deg);
+		box-shadow: 20px 20px 0 rgba(0,0,0,0.8);
+		font-weight: 900;
+	}
+	h2 {
+		color: $flavortron-yellow;
+		text-transform: uppercase;
+		transform: skewX(-15deg);
+		font-weight: 900;
+	}
+	h3 {
+
+	}
+}

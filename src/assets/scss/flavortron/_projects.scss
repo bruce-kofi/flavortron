@@ -1,0 +1,111 @@
+$white: #fff;
+$black: #000;
+$highlight: $flavortron-yellow;
+$shadow: #888888;
+
+
+.projects-wrapper {
+    // display: flex;
+    margin-bottom: $grid-gutter-width;
+
+
+    .card-article-hover {
+      margin: 0 10px;
+      background-color: $bg-color-dark;
+      border: none;
+      padding: 0;
+
+
+
+      .card-featured-image {
+        height: 300px; 
+
+        img {
+          object-fit: cover;
+          height: inherit;
+          width: 100%;
+          transition: filter .25s;
+          filter: blur(2px) sepia(50%) contrast(100%);
+          @include breakpoint(medium down) {
+            filter: blur(0) sepia(0%);
+          }
+        }
+        &:hover img {
+            filter: blur(0) sepia(0%);
+        }
+      }
+
+
+      .card-section {
+        width: 90%;
+        background: rgba(16,20,23, .7);
+        margin: 0 auto;
+        padding-top: 25px;
+        // margin-top: -3rem;
+        z-index: 2;
+
+        .article-subtext {
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 0.85rem;
+        }
+
+        .article-title {
+          font-weight: bold;
+          font-size: 1.5rem;
+          color: $white;
+        }
+
+        .article-desc {
+          font-size: 1rem;
+        }
+      }
+
+      .card-divider {
+        background: $white;
+
+        .author {
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: $highlight;
+        }
+      }
+
+      .hover-border {
+        height: 10px;
+        width: 450px;
+        background: $highlight;
+        width: 0;
+        transition: width .25s ease;
+      }
+
+      &:hover .hover-border {
+        height: 10px;
+        width: 450px;
+        transition: width .25s ease;
+      }
+
+      .author {
+        color: navy;
+      }
+
+      .avatar {
+        border-radius: 50%;
+        margin: 0 1rem;
+      }
+
+      .meta-data {
+        text-transform: uppercase;
+      }
+      @include breakpoint(medium down) {
+        margin-bottom: $grid-gutter-width;
+      }
+    }
+
+
+    @include breakpoint(medium down) {
+          padding-right: 20px;
+          margin-bottom: 0;
+
+    }
+}

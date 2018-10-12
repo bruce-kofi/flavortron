@@ -1,0 +1,30 @@
+body.single-project {
+  .main-content {
+    width: 100%;
+    .entry-content {
+      .rl-basicgrid-gallery .rl-gallery-item img {
+        height: 425px;
+        object-fit: cover;
+      }
+    }
+    .entry-title {
+      display: none;
+    }
+  }
+  .recent-posts-wrapper {
+    margin-bottom: $grid-gutter-width;
+  }
+
+  .slick-slide {
+  	padding: 0 $grid-gutter-width;
+  	transition: opacity .5s, filter .5s;
+  	&:not(.slick-current) {
+  		opacity:.5;
+  		filter: opacity(50%);
+  	}
+    img {
+      max-height: 600px;
+      height: 100%;
+    }
+  }
+}
