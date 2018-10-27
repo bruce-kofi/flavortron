@@ -21,7 +21,7 @@
  */
 
 require 'inc/plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4p3_Factory::buildUpdateChecker(
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
         'https://github.com/bruce-kofi/flavortron',
         __FILE__,
         'flavortron'
