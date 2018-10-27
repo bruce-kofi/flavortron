@@ -14,7 +14,9 @@ get_header(); ?>
 
 <div id="main-content-section" data-magellan-target="main-content-section">
 <div class="row">
-	<h2>Recent Projects</h2>
+    <div class="columns medium-4">
+	   <h2>Recent Projects</h2>
+    </div>
 </div>
 <?php get_template_part('template-parts/projects') ?>
 </div>

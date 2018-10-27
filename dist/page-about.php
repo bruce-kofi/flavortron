@@ -1,21 +1,14 @@
 <?php
-/**
-
- *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
- */
-
-$title = get_field('project_title');
-$blurb = get_field('project_blurb');
-$medium = get_field('project_medium');
-$date = get_field('project_date');
-
+/*
+Template Name: About Me Page
+*/
 get_header(); ?>
 
 <!-- Get Hero -->
 <?php get_template_part('template-parts/project-hero') ?>
 
+
+<!-- Get Featured Section -->
  <?php if( have_rows('featured_project_one') ): 
 
   while( have_rows('featured_project_one') ): the_row(); 
@@ -43,33 +36,24 @@ get_header(); ?>
   
 <?php endif; ?>
 
-<div class="main-container">
+<!-- Get Featured Section -->
+
+<div id="main-content-section" data-magellan-target="main-content-section">
+<div class="row">
+	<h2>Recent Projects</h2>
+</div>
+<?php get_template_part('template-parts/projects') ?>
+</div>
+
+<?php get_template_part('template-parts/contact-form') ?>
+<!-- <div class="main-container">
 	<div class="main-grid">
-		<main class="main-content">
-			
-			<div class="slick">
-				<?php while ( have_rows('project_gallery') ) : the_row(); 
-				// vars
-				$gallery_image = get_sub_field('project_image');
-				$description = get_sub_field('project_image_description');
-				?>
-			  <div>
-			  	<img src=" <?php echo $gallery_image['url']; ?> " alt=" <?php echo $gallery_image['alt']; ?> ">
-			  	<!-- <div><p> <?php echo $description; ?> </p></div> -->
-			  </div>
+		<main class="main-content-full-width">
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+				<?php comments_template(); ?>
 			<?php endwhile; ?>
-			</div>
-
-
-			
-					
 		</main>
 	</div>
-	<div class="row recent-posts-wrapper">
-		<div class="columns medium-4">
-			<h4>Recent Shoots</h4>
-		</div>
-	</div>
-	<?php get_template_part('template-parts/projects') ?>
-</div>
+</div> -->
 <?php get_footer();

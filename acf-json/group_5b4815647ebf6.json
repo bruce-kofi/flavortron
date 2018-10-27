@@ -102,7 +102,7 @@
                     "key": "field_5b4817074a738",
                     "label": "Featured CTA URI",
                     "name": "featured_cta_uri",
-                    "type": "url",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -111,8 +111,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "https:\/\/www.google.com\/",
-                    "placeholder": ""
+                    "return_format": "url"
                 }
             ]
         },
@@ -216,7 +215,7 @@
                     "key": "field_5b481795b9b3f",
                     "label": "Featured CTA URI two",
                     "name": "featured_cta_uri_two",
-                    "type": "url",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -225,8 +224,104 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "https:\/\/www.google.com\/",
-                    "placeholder": ""
+                    "return_format": "url"
+                }
+            ]
+        },
+        {
+            "key": "field_5bd4a7d16a353",
+            "label": "Featured 3up Section Title",
+            "name": "featured_3up_section_title",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Furry, Reliable, Cuddly",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5bd4a6cb6a34d",
+            "label": "Featured 3up",
+            "name": "featured_3up",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5bd4a7266a350",
+                    "label": "Featured 3up Icon",
+                    "name": "featured_3up_icon",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "fa-user-o",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5bd4a77f6a351",
+                    "label": "Featured 3up Title",
+                    "name": "featured_3up_title",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Keyless Entry",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5bd4a7af6a352",
+                    "label": "Featured 3up Description",
+                    "name": "featured_3up_description",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
                 }
             ]
         }
@@ -245,6 +340,13 @@
                 "operator": "==",
                 "value": "project"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-about.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -255,5 +357,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531880417
+    "modified": 1540666077
 }

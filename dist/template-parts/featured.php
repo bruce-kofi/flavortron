@@ -64,7 +64,7 @@ $featured_3up_title = get_field('featured_3up_section_title');
  $cta_2 = get_sub_field('featured_cta_two');
  $cta_uri_2 = get_sub_field('featured_cta_uri_two'); 
   ?>
-  <div class="featured-content-section featured-two">
+  <div class="featured-content-section">
 
   <div class="featured-content-section-block">
       <h3 class="featured-content-section-block-header"> <?php echo $headline_2; ?> </h3>
