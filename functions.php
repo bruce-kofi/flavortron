@@ -14,6 +14,25 @@
  * @since FoundationPress 1.0.0
  */
 
+
+/**
+ * Plugin update checker is a library that allows theme updates
+ * from.a GitHub repo
+ */
+
+require 'inc/plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4p3_Factory::buildUpdateChecker(
+        'https://github.com/bruce-kofi/flavortron',
+        __FILE__,
+        'flavortron'
+);
+
+// Optional: If you're using a private repository, specify the access token like this:
+// $myUpdateChecker->setAuthentication('f0f5c1da913883ee22386731a3ad4d4eae8c7ae7');
+
+//Optional: Set the branch that contains the stable release.
+// $myUpdateChecker->setBranch('QA');
+
 /** Various clean up functions */
 require_once( 'library/cleanup.php' );
 
